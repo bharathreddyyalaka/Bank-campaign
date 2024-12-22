@@ -44,13 +44,13 @@ public class CampaignController {
     }
 
     @PostMapping("/{campaignId}/notify")
-    public ResponseEntity<String> notifyUsers(@PathVariable Long campaignId) {
+    public ResponseEntity<String> notifyUsers(@PathVariable Long campaignId, @RequestBody NotificationRequest notificationRequest) {
         // Create a sample notification request
-        NotificationRequest notificationRequest = new NotificationRequest();
-        notificationRequest.setCampaignId(campaignId);
-        notificationRequest.setTitle("Campaign Notification");
-        notificationRequest.setMessage("Check out our new campaign!");
-        notificationRequest.setRecipient("user@example.com");
+
+//        notificationRequest.setCampaignId(campaignId);
+//        notificationRequest.setTitle("Campaign Notification");
+//        notificationRequest.setMessage("Check out our new campaign!");
+//        notificationRequest.setRecipient("user@example.com");
 
         // Call the Notification Service
         String response = notificationClient.sendNotification(notificationRequest);
