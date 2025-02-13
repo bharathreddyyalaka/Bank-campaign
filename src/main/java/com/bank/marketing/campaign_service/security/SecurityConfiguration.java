@@ -36,11 +36,10 @@ public class SecurityConfiguration {
             }
         };
 
-        http.csrf(csrf);
-        http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS) );
-
-        http.formLogin(Customizer.withDefaults());
-        http.httpBasic(Customizer.withDefaults());
+        http.csrf(csrf)
+        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS) )
+                .formLogin(Customizer.withDefaults())
+        .httpBasic(Customizer.withDefaults());
         return http.build();
     }
 
