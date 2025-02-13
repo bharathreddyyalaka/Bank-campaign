@@ -36,6 +36,7 @@ public class SecurityConfiguration {
             }
         };
         //I am trying to test git
+        //Now testing stash
         http.csrf(csrf)
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS) )
                 .formLogin(Customizer.withDefaults())
