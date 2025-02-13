@@ -35,7 +35,7 @@ public class SecurityConfiguration {
                 httpSecurityCsrfConfigurer.disable();
             }
         };
-
+        //I am trying to test git
         http.csrf(csrf)
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS) )
                 .formLogin(Customizer.withDefaults())
