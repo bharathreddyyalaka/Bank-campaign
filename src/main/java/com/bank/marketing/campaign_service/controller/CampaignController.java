@@ -31,6 +31,8 @@ public class CampaignController {
         return ResponseEntity.ok(campaignService.createCampaign(campaign));
     }
 
+
+
     @GetMapping
     public ResponseEntity<List<Campaign>> getAllCampaigns() {
         return ResponseEntity.ok(campaignService.getAllCampaigns());
